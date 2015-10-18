@@ -12,7 +12,7 @@ describe('Queue and Stack', function() {
     testStack.addItem('a');
     expect(testStack.items[0]).to.equal('a');
     testStack.addItem('b');
-    // expect(testStack.items).to.deep.equal(['a', 'b']);
+    expect(testStack.items).to.deep.equal(['a', 'b']);
     var popped = testStack.removeItem();
     expect(popped).to.equal('b');
     expect(testStack.items).to.deep.equal(['a']);
@@ -20,9 +20,9 @@ describe('Queue and Stack', function() {
 
   it('should add item to first stack in queue', function(){
     testQueue.enqueue('a');
-    // expect(testQueue.stack1.items).to.deep.equal(['a']);
+    expect(testQueue.stack1.items).to.deep.equal(['a']);
     testQueue.enqueue('b');
-    // expect(testQueue.stack1.items).to.deep.equal(['a', 'b']);
+    expect(testQueue.stack1.items).to.deep.equal(['a', 'b']);
     expect(testQueue.dequeue()).to.equal('a');
     expect(testQueue.dequeue()).to.equal('b');
     expect(testQueue.stack2.items).to.deep.equal([]);
